@@ -12,7 +12,6 @@ export function renderDom(
   if (!rootEl) {
     return;
   }
-  // console.log('Found root element');
 
   render(<Component {...props} />, rootEl);
 }

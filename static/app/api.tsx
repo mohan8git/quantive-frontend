@@ -287,7 +287,7 @@ export class Client {
       }
 
       // Call success callback
-      return func.apply(req, args); // eslint-disable-line
+      // return func.apply(req, args); // eslint-disable-line
     };
   }
 

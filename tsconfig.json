@@ -1,9 +1,10 @@
 {
-    "extends": "./config/tsconfig.build.json",
-    "compilerOptions": {
-      "allowJs": true
-    },
-    "include": ["static"],
-    "exclude": ["node_modules"]
-  }
-  
+  "extends": "./config/tsconfig.build.json",
+  "compilerOptions": {
+    "allowJs": true
+  },
+  "include": ["static", "custom.d.ts"],
+  "exclude": ["node_modules"],
+
+  "files": ["custom.d.ts"]
+}

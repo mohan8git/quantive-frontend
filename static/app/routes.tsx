@@ -92,6 +92,7 @@ function buildRoutes() {
     <Route>
       {authRoutes}
       <Route path="/" component={errorHandler(App)}>
+        {authRoutes}
         {rootRoutes}
         {orgRoutes}
       </Route>

@@ -8,7 +8,6 @@ const webpack = require('webpack');
 
 const staticPrefix = path.join(__dirname, 'static');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-
 const CLIFF_EXPERIMENTAL_SPA = true;
 
 module.exports = {
@@ -27,7 +26,7 @@ module.exports = {
       directory: path.join(__dirname, 'static'),
     },
     historyApiFallback: {
-      rewrites: [{from: /^\/.*$/, to: '/_assets/index.html'}],
+      rewrites: [{ from: /^\/.*$/, to: '/_assets/index.html' }],
     },
     open: true,
     hot: true,
@@ -64,6 +63,8 @@ module.exports = {
           limit: 10000,
         },
       },
+      { test: /\.css$/, use: 'css-loader' },
+      { test: /\.ts$/, use: 'ts-loader' },
     ],
   },
   plugins: [
@@ -75,7 +76,7 @@ module.exports = {
       typescript: {
         configFile: path.resolve(__dirname, './config/tsconfig.build.json'),
         configOverwrite: {
-          compilerOptions: {incremental: true},
+          compilerOptions: { incremental: true },
         },
         memoryLimit: 3072,
       },

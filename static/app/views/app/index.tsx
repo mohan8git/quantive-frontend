@@ -3,9 +3,7 @@ import styled from '@emotion/styled';
 import OrganizationsStore from 'cliff/stores/organizationsStore';
 // import {Client} from 'cliff/api';
 import useApi from 'cliff/utils/useApi';
-
-import one from '../../../../assests/svg/company_logo_name.svg';
-
+import 'antd/dist/reset.css';
 type Props = {
   children: React.ReactNode;
 };
@@ -37,13 +35,11 @@ function App({children}: Props) {
     <MainContainer>
       <div
         style={{
-          padding: '5px',
+          padding: '15px',
           display: 'flex',
           justifyContent: 'center',
         }}
-      >
-        <img src={one} style={{width:'200px'}}/>
-      </div>
+      ></div>
       <div>{children}</div>
     </MainContainer>
   );
